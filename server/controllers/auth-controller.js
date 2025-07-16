@@ -33,7 +33,8 @@ const register = async ( req, res ) => {
             userId: userCreated._id.toString(),
         });
     } catch (error) {
-        res.status(400).send({msg: "page not found"});
+        // res.status(400).send({msg: "page not found"});
+        next(error);
     }
 }
 
