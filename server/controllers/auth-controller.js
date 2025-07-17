@@ -43,7 +43,6 @@ const login = async ( req, res ) => {
         const { email, password } = req.body;
         // check if email is valid
         const userExist = await User.findOne({ email });
-        console.log( userExist, "userExist" );
         if( !userExist ) {
             return res
                 .status( 400 )
